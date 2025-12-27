@@ -6,7 +6,7 @@
 echo usuario y password administrador
 read -p 'usuario: ' uservar
 read -sp 'password: ' passvar
-echo Usuario admin del sistema:  $uservar.
+echo Usuario admin del sistema:  $uservar
 pause
 # update os
 apt update && apt upgrade --yes

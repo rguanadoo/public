@@ -12,7 +12,7 @@ bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/
 ```
 
 ## install_user.sh
-__Acceso SSH__ al sistema con usuario administrador.
+__Acceso SSH__ al sistema con usuario con permisos de admin(sudo).
 * Instalación del cliente de Github
 * Conexión al repositorio de instalació
 * Clonado del repositorio

@@ -16,8 +16,7 @@ apt install sudo rsync nano telnet curl net-tools wget git --yes
 useradd -m -s /bin/bash $uservar -p $passvar
 usermod -aG sudo $uservar
 echo nuevo administrador: $uservar
-echo reiniciando
-sleep 2
+echo reiniciando...
 shutdown -r -t 5
 
 

@@ -7,7 +7,6 @@ echo usuario y password administrador
 read -p 'usuario: ' uservar
 read -sp 'password: ' passvar
 echo Usuario admin del sistema:  $uservar
-pause
 # update os
 apt update && apt upgrade --yes
 apt install sudo rsync nano telnet curl net-tools wget git --yes
@@ -16,7 +15,4 @@ apt install sudo rsync nano telnet curl net-tools wget git --yes
 useradd -m -s /bin/bash $uservar -p $passvar
 usermod -aG sudo $uservar
 echo nuevo administrador: $uservar
-echo reiniciando...
-shutdown -r -t 5
-
-
+shutdown -r -t 05 -c "Reiniciando en 5 segundos.."

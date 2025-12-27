@@ -18,6 +18,6 @@ usermod -aG sudo $uservar
 echo nuevo administrador: $uservar
 echo reiniciando
 sleep 2
-shutdown -r now
+shutdown -r -t 5
 
 

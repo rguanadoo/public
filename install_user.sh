@@ -7,9 +7,9 @@ echo token de acceso al repo
 read -sp 'token: ' tokenvar
 echo usuario y repo: usuario/repo
 echo introduce el usuario:
-read -p 'usuario: ' gitvar
+read -p 'usuario: ' gituser
 echo introduce el repositorio
-read -p 'repo: ' repovar
+read -p 'repo: ' gitrepo
 
 # intalación gh client
 sudo apt install gh
@@ -25,8 +25,12 @@ gh auth login --with-token $GH_TOKEN
 # clonar repo deploy
 # read -p 'gituser: ' gitvar
 # read -p 'repo: ' repovar
-echo clon: $gitvar/$repovar
-gh repo clone $gitvar/$repovar
+echo clon: $gituser/$gitrepo e inicio install
+gh repo clone $gituser/$gitrepo
+
+# reset token
+tokenvar=''
+export GH_TOKEN=$tokenvar
 
 # iniciar deploy
 bash <( $repovar/install.sh)

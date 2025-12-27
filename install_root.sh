@@ -1,6 +1,6 @@
 #!/bin/bash
 # SCRIPT CONFIG BASE: update, apps, usuario
-# curl -fsSL https://github.com/rguanadoo/public/blob/install_root.sh | bash && ./install_root.sh
+# curl -fsSL https://github.com/rguanadoo/public/blob/main/install_root.sh | bash && ./install_root.sh
 
 # variables
 echo usuario y password administrador

@@ -8,7 +8,7 @@ Se ejecuta desde la __consola de sistema__, con usuario root. \
 * Añade usuario administrador (sudo)
 * Reinicio del sistema
 ```bash
-curl -fsSL https://static.pangolin.net/get-installer.sh | bash && ./install_root.sh
+curl -fsSL https://github.com/rguanadoo/public/blob/main/install_root.sh | bash && ./install_root.sh
 ```
 
 ## install_user.sh
@@ -17,3 +17,7 @@ Acceso SSH al sistema con usuario administrador.
 * Conexión al repositorio de instalació
 * Clonado del repositorio
 * Inicio configuración del sistema y servicios.
+
+```bash
+curl -fsSL https://github.com/rguanadoo/public/blob/main/install_user.sh | bash && ./install_user.sh
+```

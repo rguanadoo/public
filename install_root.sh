@@ -4,8 +4,9 @@
 
 # variables
 echo usuario y password administrador
-read 'usuario: ' uservar
-read -p 'password: ' passvar
+userver=$(read 'usuario':)
+# read 'usuario: ' uservar
+# read -p 'password: ' passvar
 echo Usuario admin del sistema:  $uservar.
 
 # update os

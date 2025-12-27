@@ -18,13 +18,13 @@ Acceso SSH al sistema con usuario administrador.
 * Clonado del repositorio
 * Inicio configuración del sistema y servicios.
 
+### ejemplos
+modo usuario
 ```bash
-curl -fsSL https://github.com/rguanadoo/public/blob/main/install_user.sh | bash && ./install_user.sh
+# bash <(wget -qO - http://website.com/my-script.sh)
 ```
-
-
-bash <(wget -qO- https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/install_root.sh)
-
-sudo su -c "bash <(wget -qO- http://website.com/my-script.sh)" root
-
+modo root
+```bash
+# sudo su -c "bash <(wget -qO - http://website.com/my-script.sh)" root
+```
 

@@ -8,15 +8,19 @@ Se ejecuta desde la __consola de sistema__, con usuario root. \
 * Añade usuario administrador (sudo)
 * Reinicio del sistema
 ```bash
-curl -fsSL https://github.com/rguanadoo/public/blob/main/install_root.sh | bash && ./install_root.sh
+bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/install_root.sh)
 ```
 
 ## install_user.sh
-Acceso SSH al sistema con usuario administrador.
+__Acceso SSH__ al sistema con usuario administrador.
 * Instalación del cliente de Github
 * Conexión al repositorio de instalació
 * Clonado del repositorio
 * Inicio configuración del sistema y servicios.
+```bash
+bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/install_user.sh)
+```
+
 
 ### ejemplos
 modo usuario

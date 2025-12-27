@@ -16,7 +16,7 @@
 	&& sudo apt install gh -y
 
 # echo API de acceso a git
-read -p 'token: ' tokenvar
+read -sp 'token: ' tokenvar
 export GH_TOKEN=$tokenvar
 gh auth login --with-token $GH_TOKEN
 
@@ -24,8 +24,8 @@ gh auth login --with-token $GH_TOKEN
 # gh config get -h github.com oauth_token
 
 # clonar repo deploy
-read 'gituser: ' gitvar
-read 'repo: ' repovar
+read -p 'gituser: ' gitvar
+read -p 'repo: ' repovar
 echo clon: $gitvar/$repovar
 gh repo clone $gitvar/$repovar
 

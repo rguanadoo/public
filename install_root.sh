@@ -7,7 +7,7 @@ echo usuario y password administrador
 read 'usuario: ' uservar
 read -p 'password: ' passvar
 echo Usuario admin del sistema:  $uservar.
-
+pause
 # update os
 apt update && apt upgrade --yes
 apt install sudo rsync nano telnet curl net-tools wget git --yes

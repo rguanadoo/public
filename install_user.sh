@@ -1,6 +1,6 @@
 #!/bin/bash
 # SCRIPT GITHUB + DEPLOY
-# # bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/install_user.sh)
+# bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/install_user.sh)
 
 
 # intalación gh client
@@ -30,5 +30,4 @@ echo clon: $gitvar/$repovar
 gh repo clone $gitvar/$repovar
 
 # iniciar deploy
-chmod +x $repovar/install.sh
-$repovar/install.sh
+bash <( $repovar/install.sh)

@@ -1,5 +1,7 @@
 #!/bin/bash
 # SCRIPT GITHUB + DEPLOY
+# curl -fsSL https://github.com/rguanadoo/public/blob/main/install_user.sh | bash && ./install_user.sh
+
 
 # intalación gh client
 

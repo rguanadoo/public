@@ -1,6 +1,6 @@
 #!/bin/bash
 # SCRIPT CONFIG BASE: update, apps, usuario
-# wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/install_root.sh | bash
+# bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/install_root.sh)
 
 # variables
 echo usuario y password administrador

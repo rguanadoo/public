@@ -28,4 +28,4 @@ gh repo clone $gitrepo
 # modificar si hay carpetas en la carpeta del usuario, o ejecutar en una carpeta vacia.
 
 #### COMENTAR LA SIGUIENTE LINEA SI SE QUIERE REVISAR EL CODIGO ####
-# for dir in ${PWD}/*; do (cd "$dir" && bash <(cat install.sh)); done
+for dir in ${PWD}/*; do (cd "$dir" && bash <(cat install.sh)); done

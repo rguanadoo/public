@@ -1,34 +1,36 @@
 #!/bin/bash
-# SCRIPT GITHUB + DEPLOY
-# bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/install_user.sh)
+### SCRIPT GITHUB + DEPLOY
+### bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/install_user.sh)
 
-# variables
-echo token de acceso al repo
+## variables
+
+echo introduce el repositorio a clonar: gituser/repo
+read -p 'Git Repo: ' gitrepo
+echo introducen el token de acceso al repo:
 read -sp 'token: ' tokenvar
-echo introduce el repositorio de rguanadoo
-gitrepo=deploy
-gituser=rguanadoo
-# intalación gh client
+
+## intalación gh client
+
 sudo apt install net-tools rsync nano vim telnet curl git iputils-ping gh --yes
 
-# echo API de acceso a git
-# read -sp 'token: ' tokenvar
+## login en el repo
+
 export GH_TOKEN=$tokenvar
 gh auth login --with-token $GH_TOKEN
 
-# comprobar token exportado
+## comprobar token exportado
 # gh config get -h github.com oauth_token
 
-# clonar repo deploy
-# read -p 'gituser: ' gitvar
-# read -p 'repo: ' repovar
-echo clon: $gituser/$gitrepo e inicio install
-gh repo clone $gituser/$gitrepo
+## clonar repo
 
-# reset token
+echo clon: $gitrepo e inicio install
+gh repo clone $gitrepo
+
+## reset token - opcional
 #tokenvar=''
 #export GH_TOKEN=$tokenvar
 
-# iniciar deploy
-cd $gitrepo
-bash <(cat install.sh $gitrepo)
+## iniciar deploy 
+# modificar si hay directorios en la carpeta del usuario
+
+for dir in ~/*; do (cd "$dir" && bash <(cat install.sh)); done

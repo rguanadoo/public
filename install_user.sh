@@ -6,10 +6,10 @@
 echo introduce el repositorio a clonar: gituser/repo
 read -p 'Git Repo: ' gitrepo
 echo introducen el token de acceso al repo:
-read -sp 'token: ' gittoken
+read -sp 'API Token: ' gittoken
 
 ## intalación gh client
-
+echo basic apps
 sudo apt install net-tools rsync nano vim telnet curl git iputils-ping gh --yes
 
 ## login en el repo

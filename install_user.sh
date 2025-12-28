@@ -6,14 +6,14 @@
 echo introduce el repositorio a clonar: gituser/repo
 read -p 'Git Repo: ' gitrepo
 echo introducen el token de acceso al repo:
-read -sp 'token: ' tokenvar
+read -sp 'token: ' gittoken
 
 ## intalación gh client
 
 sudo apt install net-tools rsync nano vim telnet curl git iputils-ping gh --yes
 
 ## login en el repo
-export GH_TOKEN=$tokenvar
+export GH_TOKEN=$gittoken
 gh auth login --with-token $GH_TOKEN
 
 ## comprobar token exportado (opcional)
@@ -25,8 +25,8 @@ echo clon: $gitrepo e inicio install
 gh repo clone $gitrepo
 
 ## reset token (opcional)
-# tokenvar=""
-# export GH_TOKEN=$tokenvar
+# gittoken=""
+# export GH_TOKEN=$gittoken
 
 ## iniciar deploy 
 # modificar si hay carpetas en la carpeta del usuario, o ejecutar en una carpeta vacia.

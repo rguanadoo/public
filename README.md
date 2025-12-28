@@ -1,5 +1,5 @@
 # Repositorio público
-Scripts de inicio de instalación de sistemas linux.
+Scripts de inicio de instalación de sistemas linux. Ejecutar en una carpeta vacia.
 
 ## install_root.sh
 Se ejecuta desde la __consola de sistema__, con usuario root. \
@@ -12,11 +12,11 @@ bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/
 ```
 
 ## install_user.sh
-__Acceso SSH__ al sistema con usuario con permisos de admin(sudo).
+__Acceso SSH__ al sistema con usuario admin (sudo).
 * Instalación del cliente de Github
-* Conexión al repositorio de instalació
+* Login al repositorio privado de instalación
 * Clonado del repositorio
-* Inicio configuración del sistema y servicios.
+* Lanzado menu de opciones de instalación
 ```bash
 bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/install_user.sh)
 ```

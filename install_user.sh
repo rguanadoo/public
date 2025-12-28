@@ -29,8 +29,8 @@ echo clon: $gituser/$gitrepo e inicio install
 gh repo clone $gituser/$gitrepo
 
 # reset token
-tokenvar=''
-export GH_TOKEN=$tokenvar
+#tokenvar=''
+#export GH_TOKEN=$tokenvar
 
 # iniciar deploy
-bash <( $repovar/install.sh)
+bash <( $gitrepo/install.sh)

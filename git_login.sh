@@ -18,7 +18,7 @@ gh auth login --with-token $GH_TOKEN
 ## clonar repo
 
 echo clon: $gitrepo e inicio install
-echo gh repo clone $gitrepo
+gh repo clone $gitrepo
 
 ## reset token (opcional)
 # gittoken=""

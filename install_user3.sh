@@ -33,4 +33,4 @@ gh repo clone $gituser/$gitrepo
 #export GH_TOKEN=$tokenvar
 
 # iniciar deploy
-bash <($gitrepo/install.sh)
+bash <(cat $gitrepo/install.sh)

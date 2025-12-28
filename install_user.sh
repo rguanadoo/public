@@ -5,12 +5,9 @@
 # variables
 echo token de acceso al repo
 read -sp 'token: ' tokenvar
-echo usuario y repo: usuario/repo
-echo introduce el usuario:
-read -p 'usuario: ' gituser
-echo introduce el repositorio
+echo introduce el repositorio de rguanadoo
 read -p 'repo: ' gitrepo
-
+gituser=rguanadoo
 # intalación gh client
 sudo apt install net-tools rsync nano vim telnet curl git iputils-ping gh --yes
 

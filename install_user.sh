@@ -12,8 +12,7 @@ echo introduce el repositorio
 read -p 'repo: ' gitrepo
 
 # intalación gh client
-sudo apt install gh
-apt install net-tools rsync nano vi telnet curl git iputils-ping  --yes
+sudo apt install net-tools rsync nano vi telnet curl git iputils-ping gh --yes
 
 # echo API de acceso a git
 # read -sp 'token: ' tokenvar

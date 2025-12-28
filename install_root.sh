@@ -4,7 +4,7 @@
 
 # variables
 echo usuario y password administrador
-$ipcli=(hostname -I | cut -d' ' -f1)
+ipcli=$(hostname -I | cut -d' ' -f1)
 read -p 'usuario: ' useradm
 read -sp 'password: ' userpass
 echo Usuario admin del sistema:  $useradm

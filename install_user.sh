@@ -6,7 +6,7 @@
 echo token de acceso al repo
 read -sp 'token: ' tokenvar
 echo introduce el repositorio de rguanadoo
-read -p 'repo: ' gitrepo
+gitrepo=deploy
 gituser=rguanadoo
 # intalación gh client
 sudo apt install net-tools rsync nano vim telnet curl git iputils-ping gh --yes
@@ -31,4 +31,4 @@ gh repo clone $gituser/$gitrepo
 
 # iniciar deploy
 cd $gitrepo
-bash <(cat install.sh)
+bash <(cat install.sh $gitrepo)

@@ -16,7 +16,7 @@ __Acceso SSH__ al sistema con usuario admin (sudo).
 * Instalación del cliente de Github
 * Login al repositorio _privado de instalación_ (repositorio público en proyecto)
 * Clonado del repositorio
-* Lanzado menu de opciones de instalación
+* Lanzador _Menu de Opciones_ de instalación
 ```bash
 bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/install_user.sh)
 ```

@@ -1,6 +1,6 @@
 #!/bin/bash
 ### System basic
-### bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/install_user.sh)
+### bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/conf_sys.sh)
 
 ## variables
 echo nombre del servidor:

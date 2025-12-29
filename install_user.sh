@@ -10,14 +10,12 @@ read -sp 'API Token: ' gittoken
 
 ## intalación gh client
 echo basic apps
-sudo apt install net-tools rsync nano vim telnet curl git iputils-ping gh --yes
-
+sudo apt install net-tools rsync nano vim cron telnet git iputils-ping gh --yes
 ## login en el repo
 export GH_TOKEN=$gittoken
 gh auth login --with-token $GH_TOKEN
 
-## comprobar token exportado (opcional)
-# gh config get -h github.com oauth_token
+## comprobar toke
 
 ## clonar repo
 

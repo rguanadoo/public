@@ -21,6 +21,16 @@ __Acceso SSH__ al sistema con usuario admin (sudo).
 bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/install_user.sh)
 ```
 
+## actualizar repo
+```bash
+bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/git_login.sh)
+```
+
+## lanzar menu
+```bash
+for dir in ${PWD}/*; do (cd "$dir" && bash <(cat install.sh)); done
+```
+
 
 ### ejemplos
 modo usuario

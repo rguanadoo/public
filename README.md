@@ -2,7 +2,7 @@
 Scripts de inicio de instalación de sistemas linux. Ejecutar en una carpeta vacia.
 
 ## install_root.sh
-Se ejecuta desde la __consola de sistema__, con usuario root. \
+Se ejecuta desde la __consola de sistema__, con usuario root.
 * Actualización del sistema
 * Instalación aplicaciónes básicas
 * Añade usuario administrador (sudo)

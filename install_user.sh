@@ -3,6 +3,8 @@
 ### bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/install_user.sh)
 
 ## variables
+echo nombre del servidor:
+read -p 'hostname: ' srvname
 echo introduce el repositorio a clonar: gituser/repo
 read -p 'Git Repo: ' gitrepo
 echo introducen el token de acceso al repo:
@@ -11,6 +13,11 @@ read -sp 'API Token: ' gittoken
 ## intalación gh client
 echo basic apps
 sudo apt install net-tools rsync nano vim cron telnet git iputils-ping gh --yes
+
+# config nombre y hora server
+sudo hostnamectl hostname $srvname
+sudo timedatectl set-timezone Europe/Madrid
+
 ## login en el repo
 export GH_TOKEN=$gittoken
 gh auth login --with-token $GH_TOKEN

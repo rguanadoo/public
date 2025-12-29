@@ -11,7 +11,7 @@ echo Usuario admin del sistema:  $useradm
 
 # update os
 apt update && apt upgrade --yes
-apt install sudo rsync nano telnet curl net-tools wget git --yes
+apt install sudo --yes
 
 # usuario admin + reinicio
 useradd -m -s /bin/bash $useradm -p $userpass

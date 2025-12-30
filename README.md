@@ -23,12 +23,13 @@ __Acceso SSH__ al sistema con usuario admin (sudo).
 ```bash
 bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/2_configure_sys.sh)
 ```
-__lanzar menu__ (pendiente mejora awk)
+
+## instalar docker y utils
 ```bash
-for dir in ${PWD}/*; do (cd "$dir" && bash <(cat install.sh)); done
+bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/add_docker.sh)
 ```
 
-## deploy.sh
+## deploy.sh - acceso github privado
 __Acceso SSH__ al sistema con usuario admin (sudo).
 * Login al repositorio _privado de instalación_ (repositorio público en proyecto)
 * Clonado del repositorio
@@ -36,9 +37,9 @@ __Acceso SSH__ al sistema con usuario admin (sudo).
 ```bash
 bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/3_deploy.sh)
 ```
-### instalar docker y utils
+__lanzar menu__ (pendiente mejora awk)
 ```bash
-bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/add_docker.sh)
+for dir in ${PWD}/*; do (cd "$dir" && bash <(cat install.sh)); done
 ```
 
 __referencias__

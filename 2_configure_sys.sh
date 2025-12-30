@@ -1,10 +1,9 @@
 #!/bin/bash
 # Purpose: configure hostname ip network timezone dns
 # 30-12-2025 - Roberto Guanadoo
-# bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/1_add_useradm.sh)
-### bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/2_configure_sys.sh)
+# bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/2_configure_sys.sh)
 
-## variables
+# variables
 echo nombre del servidor:
 read -p 'hostname: ' srvname
 echo ip del servidor clase c /24
@@ -14,7 +13,7 @@ read -p 'gateway: ' srvgtw
 echo dns local
 read -p 'dns: ' srvdns
 
-## intalación apps
+# intalación apps
 echo basic apps
 sudo apt install net-tools rsync nano vim cron telnet git iputils-ping gh --yes
 
@@ -45,6 +44,6 @@ sed -i 's/123.45.67.2/'$srvdns'/' 50-cloud-init.yaml
 sed -i 's/123.45.67.1/'$srvgtw'/' 50-cloud-init.yaml
 sudo mv 50-cloud-init.yaml /etc/netplan/
 
-# REINICIO
+# reinicio
 echo reinicio $srvname : 'ssh '$USER'@'$srvip''
 sudo shutdown -r +1 "################## Reiniciando el sistema... ##################"

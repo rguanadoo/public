@@ -1,5 +1,7 @@
 # Repositorio público
-Scripts de inicio de instalación de sistemas debian. \
+Scripts de inicio de instalación de _Ubuntu 24.04.3 LTS (GNU/Linux 6.8.0-90-generic x86_64)_. \
+Realiza la configuración básica e instalación de docker engine y utilidades.
+
 Directorio _conf_: templates de ficheros del sistema.
 
 ## add_useradm.sh
@@ -25,6 +27,12 @@ bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/
 ```
 
 ## instalar docker y utils
+* Instala docker engine
+* Lazydocker
+* docker-compose
+* permisos docker al usuario
+* creación carpeta de __stacks__
+* configuración script start (@reboot crontab) y stop de containers en la carpeta stacks y creación de redes docker.
 ```bash
 bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/add_docker.sh)
 ```

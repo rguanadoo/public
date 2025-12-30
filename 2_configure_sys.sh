@@ -31,7 +31,7 @@ sudo systemctl reload-or-restart systemd-resolved
 # systemd-analyze cat-config systemd/resolved.conf
 
 # unattended-upgrades
-sudo apt install unattended-upgrades apt-utils 
+sudo apt install unattended-upgrades apt-utils --yes
 sudo dpkg-reconfigure -plow unattended-upgrades
 sudo cp config/50unattended-upgrades /etc/apt/apt.conf.d
 sudo cp config/20auto-upgrades /etc/apt/apt.conf.d

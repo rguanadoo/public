@@ -22,7 +22,7 @@ sudo timedatectl set-timezone Europe/Madrid
 
 # config dns server local
 sudo mkdir /etc/systemd/resolved.conf.d
-https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/conf/dns_local.conf
+wget https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/conf/dns_local.conf
 echo 'FallbackDNS='$srvdns'' >> dns_local.conf
 sudo mv dns_local.conf /etc/systemd/resolved.conf.d/
 sudo systemctl reload-or-restart systemd-resolved

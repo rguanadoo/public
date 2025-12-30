@@ -5,7 +5,12 @@
 ## variables
 echo nombre del servidor:
 read -p 'hostname: ' srvname
-# pendiente cambio de ip
+echo ip del servidor clase c /24
+read -p 'ipaddress c: ' srvip
+echo gateway
+read -p 'gateway: ' srvgtw
+echo dns local
+read -p 'dns: ' srvdns
 
 ## intalación apps
 echo basic apps
@@ -16,7 +21,13 @@ sudo hostnamectl hostname $srvname
 sudo sed -i 's/^127.0.1.1 .*$/127.0.1.1 '$srvname'/' /etc/hosts
 sudo timedatectl set-timezone Europe/Madrid
 
+# cambio de ip
+wget https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/50-cloud-init.yaml
+sed -i 's/123.45.67.8/'$srvip'/' 50-cloud-init.yaml
+sed -i 's/123.45.67.2/'$srvdns'/' 50-cloud-init.yaml
+sed -i 's/123.45.67.1/'$srvgtw'/' 50-cloud-init.yaml
+sudo mv 50-cloud-init.yaml /etc/netplan/
+
 # REINICIO
-export ipcli=$( hostname -I | cut -d' ' -f1)
-echo reinicio newname: 'ssh '$USER'@'$ipcli''
+echo reinicio $srvname : 'ssh '$USER'@'$srvip''
 sudo shutdown -r +1 "################## Reiniciando el sistema... ##################"

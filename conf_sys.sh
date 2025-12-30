@@ -11,8 +11,9 @@ read -p 'hostname: ' srvname
 echo basic apps
 sudo apt install net-tools rsync nano vim cron telnet git iputils-ping gh --yes
 
-# config nombre y hora server
+# config hostname host y timezone
 sudo hostnamectl hostname $srvname
+sudo sed -i 's/^127.0.1.1 .*$/127.0.1.1 '$srvname'/' /etc/hosts
 sudo timedatectl set-timezone Europe/Madrid
 
 # REINICIO

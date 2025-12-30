@@ -30,6 +30,10 @@ __Acceso SSH__ al sistema con usuario admin (sudo).
 ```bash
 bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/run_install.sh)
 ```
+## instalar docker y utils
+```bash
+bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/run_docker.sh)
+```
 
 ## actualizar repo
 ```bash

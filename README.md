@@ -4,7 +4,7 @@ Scripts de inicio de instalación de sistemas linux. Ejecutar en una carpeta vac
 ## add_useradm.sh
 Se ejecuta desde la __consola de sistema__, con usuario root.
 * Actualización del sistema
-* Instalación aplicaciónes básicas
+* Instala sudo
 * Añade usuario administrador (sudo)
 * Reinicio del sistema
 ```bash
@@ -13,6 +13,7 @@ bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/
 
 ## start_sys.sh
 __Acceso SSH__ al sistema con usuario admin (sudo).
+* Instala aplicaciones basicas
 * Cambio nombre del servidor
 * Ajustar zona horaria Europe/Madrid
 * Reinicio del sistema

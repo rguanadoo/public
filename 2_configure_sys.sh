@@ -6,12 +6,10 @@
 # variables
 echo nombre del servidor:
 read -p 'hostname: ' srvname
-echo ip del servidor x.x.x.x (clase C = x.x.x.x/24)
-read -p 'ipaddress c: ' srvip
-echo gateway
-read -p 'gateway: ' srvgtw
-echo dns local
-read -p 'dns: ' srvdns
+echo ip del servidor x.x.x.x (sin mask - clase C = x.x.x.x/24)
+read -p 'IpAddress: ' srvip
+read -p 'Gateway: ' srvgtw
+read -p 'DNS Local: ' srvdns
 
 # intalación apps
 echo basic apps
@@ -45,9 +43,9 @@ sed -i 's/123.45.67.2/'$srvdns'/' 50-cloud-init.yaml
 sed -i 's/123.45.67.1/'$srvgtw'/' 50-cloud-init.yaml
 sudo mv 50-cloud-init.yaml /etc/netplan/
 echo config de red pendiente de reincio
-echo ip: $srvip/24
-echo gtw: $srvgtw
-echo dns: $srvdns
+echo IP: $srvip/24
+echo GTW: $srvgtw
+echo DNS: $srvdns
 
 # reinicio
 echo reinicio "$srvname" : 'ssh '$USER'@'$srvip''

@@ -23,6 +23,25 @@ sudo hostnamectl hostname $srvname
 sudo sed -i 's/^127.0.1.1 .*$/127.0.1.1 '$srvname'/' /etc/hosts
 sudo timedatectl set-timezone Europe/Madrid
 
+# config dns server local
+sudo mkdir /etc/systemd/resolved.conf.d
+
+sudo cp config/dns_local.conf /etc/systemd/resolved.conf.d/
+sudo systemctl reload-or-restart systemd-resolved
+# systemd-analyze cat-config systemd/resolved.conf
+
+# agregar ca local root + intermediate
+# https://www.digitalocean.com/community/tutorials/how-to-set-up-and-configure-a-certificate-authority-ca-on-debian-10-es
+sudo cp certs/*.crt /usr/local/share/ca-certificates/
+sudo update-ca-certificates
+
+# unattended-upgrades
+sudo apt install unattended-upgrades apt-utils 
+sudo dpkg-reconfigure -plow unattended-upgrades
+sudo cp config/50unattended-upgrades /etc/apt/apt.conf.d
+sudo cp config/20auto-upgrades /etc/apt/apt.conf.d
+sudo unattended-upgrades --dry-run --debug
+
 # cambio de ip
 wget https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/conf/50-cloud-init.yaml
 sed -i 's/123.45.67.8/'$srvip'/' 50-cloud-init.yaml

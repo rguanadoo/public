@@ -22,7 +22,7 @@ sudo sed -i 's/^127.0.1.1 .*$/127.0.1.1 '$srvname'/' /etc/hosts
 sudo timedatectl set-timezone Europe/Madrid
 
 # cambio de ip
-wget https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/50-cloud-init.yaml
+wget https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/conf/50-cloud-init.yaml
 sed -i 's/123.45.67.8/'$srvip'/' 50-cloud-init.yaml
 sed -i 's/123.45.67.2/'$srvdns'/' 50-cloud-init.yaml
 sed -i 's/123.45.67.1/'$srvgtw'/' 50-cloud-init.yaml

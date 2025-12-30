@@ -1,0 +1,13 @@
+network:
+  version: 2
+  ethernets:
+    ens18:
+      addresses:
+      - "123.45.67.8/24"
+      nameservers:
+        addresses:
+        - 123.45.67.2
+        search: []
+      routes:
+      - to: "default"
+        via: "123.45.67.1"

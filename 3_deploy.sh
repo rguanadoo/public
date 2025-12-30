@@ -24,6 +24,6 @@ gh repo clone $gitrepo
 # export GH_TOKEN=$gittoken
 
 # iniciar deploy 
-cd $repo && bash <(cat install.sh)
+bash <(cat $repo/install.sh)
 
 # for dir in ${PWD}/*; do (cd "$dir" && bash <(cat install.sh)); done

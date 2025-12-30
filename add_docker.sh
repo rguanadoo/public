@@ -1,3 +1,8 @@
+#!/bin/bash
+# Purpose: install docker engine lazydocker docker-compose 1.22 user docker perm
+# 30-12-2025 - Roberto Guanadoo
+# bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/add_docker.sh)
+
 # DOCKER ENGINE
 sudo curl https://get.docker.com | sh
 
@@ -37,8 +42,7 @@ sudo curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-c
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 
-# REINICIO
-export ipcli=$( hostname -I | cut -d' ' -f1)
-echo reinicio permisos: 'ssh '$USER'@'$ipcli''
+# reinicio
+echo reinicio $hostname
 sudo shutdown -r +1 "################## Reiniciando el sistema... ##################"
 

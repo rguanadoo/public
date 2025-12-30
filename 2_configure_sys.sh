@@ -44,8 +44,6 @@ sed -i 's/123.45.67.2/'$srvdns'/' 50-cloud-init.yaml
 sed -i 's/123.45.67.1/'$srvgtw'/' 50-cloud-init.yaml
 sudo mv 50-cloud-init.yaml /etc/netplan/
 
-newname=cat <(hostname)
-
 # reinicio
-echo reinicio "$hostname" : 'ssh '$USER'@'$srvip''
+echo reinicio "$srvname" : 'ssh '$USER'@'$srvip''
 sudo shutdown -r +1 "################## Reiniciando el sistema... ##################"

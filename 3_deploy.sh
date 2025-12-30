@@ -1,6 +1,6 @@
 #!/bin/bash
 ### SCRIPT GITHUB + DEPLOY
-### bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/install_user.sh)
+### bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/3_deploy.sh)
 ### requiere gh: sudo apt install gh. Instaladoen 2_configure_sys.sh
 
 ## variables

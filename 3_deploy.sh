@@ -9,6 +9,7 @@ echo introduce el repositorio a clonar: gituser/repo
 read -p 'Git Repo: ' gitrepo
 echo introducen el token de acceso al repo:
 read -sp 'API Token: ' gittoken
+repo=$(echo $gitrepo | awk -F "/" '{print $2}')
 
 # login en el repo
 export GH_TOKEN=$gittoken
@@ -23,7 +24,6 @@ gh repo clone $gitrepo
 # export GH_TOKEN=$gittoken
 
 # iniciar deploy 
-# modificar si hay carpetas en la carpeta del usuario, o ejecutar en una carpeta vacia.
+cd $repo && bash <(cat install.sh)
 
-#### COMENTAR LA SIGUIENTE LINEA SI SE QUIERE REVISAR EL CODIGO ####
-for dir in ${PWD}/*; do (cd "$dir" && bash <(cat install.sh)); done
+# for dir in ${PWD}/*; do (cd "$dir" && bash <(cat install.sh)); done

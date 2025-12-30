@@ -1,5 +1,6 @@
 # Repositorio público
-Scripts de inicio de instalación de sistemas linux. Ejecutar en una carpeta vacia.
+Scripts de inicio de instalación de sistemas linux. \
+Directorio _conf_ ,contiene templates de ficheros del sistema.
 
 ## add_useradm.sh
 Se ejecuta desde la __consola de sistema__, con usuario root.

@@ -1,8 +1,6 @@
 #!/bin/bash
 # Purpose: update system + add sudo user
 # 30-12-2025 - Roberto Guanadoo
-
-# SCRIPT CONFIG BASE: 
 # bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/add_useradm.sh)
 
 # variables

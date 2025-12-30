@@ -44,6 +44,10 @@ sed -i 's/123.45.67.8/'$srvip'/' 50-cloud-init.yaml
 sed -i 's/123.45.67.2/'$srvdns'/' 50-cloud-init.yaml
 sed -i 's/123.45.67.1/'$srvgtw'/' 50-cloud-init.yaml
 sudo mv 50-cloud-init.yaml /etc/netplan/
+echo config de red pendiente de reincio
+echo ip: $srvip/24
+echo gtw: $srvgtw
+echo dns: $srvdns
 
 # reinicio
 echo reinicio "$srvname" : 'ssh '$USER'@'$srvip''

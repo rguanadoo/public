@@ -1,5 +1,7 @@
 #!/bin/bash
-### System basic
+# Purpose: configure hostname ip network timezone dns
+# 30-12-2025 - Roberto Guanadoo
+# bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/1_add_useradm.sh)
 ### bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/2_configure_sys.sh)
 
 ## variables

@@ -24,16 +24,17 @@ sudo timedatectl set-timezone Europe/Madrid
 
 # config dns server local
 sudo mkdir /etc/systemd/resolved.conf.d
-wget https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/conf/dns_local.conf
+https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/conf/dns_local.conf
 echo 'FallbackDNS='$srvdns'' >> dns_local.conf
-sudo cp dns_local.conf /etc/systemd/resolved.conf.d/
+sudo mv dns_local.conf /etc/systemd/resolved.conf.d/
 sudo systemctl reload-or-restart systemd-resolved
 # systemd-analyze cat-config systemd/resolved.conf
 
 # unattended-upgrades
 sudo apt install unattended-upgrades apt-utils --yes
 sudo dpkg-reconfigure -plow unattended-upgrades
-sudo cp config/50unattended-upgrades /etc/apt/apt.conf.d
+sudo curl -L https:
+sudo curl -L https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/conf/50unattended-upgrades -o /etc/apt/apt.conf.d/50unattended-upgrades
 sudo cp config/20auto-upgrades /etc/apt/apt.conf.d
 sudo unattended-upgrades --dry-run --debug
 

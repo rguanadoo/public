@@ -8,45 +8,37 @@ Se ejecuta desde la __consola de sistema__, con usuario root.
 * Añade usuario administrador (sudo)
 * Reinicio del sistema
 ```bash
-bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/add_useradm.sh)
+bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/1_add_useradm.sh)
 ```
 
-## start_sys.sh
+## configure_sys.sh
 __Acceso SSH__ al sistema con usuario admin (sudo).
 * Instala aplicaciones basicas
 * Cambio nombre del servidor
 * Ajustar zona horaria Europe/Madrid
 * Reinicio del sistema
 ```bash
-bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/start_sys.sh)
+bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/2_configure_sys.sh)
 ```
-## run_install.sh
-__Acceso SSH__ al sistema con usuario admin (sudo).
-* Instalación del cliente de Github
-* Login al repositorio _privado de instalación_ (repositorio público en proyecto)
-* Clonado del repositorio
-* Lanzador _Menu de Opciones_ de instalación
-```bash
-bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/run_install.sh)
-```
-## instalar docker y utils
-```bash
-bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/run_docker.sh)
-```
-
-## actualizar repo
-```bash
-bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/git_login.sh)
-```
-
-## lanzar menu
-pendiente mejora con awk
+__lanzar menu__ (pendiente mejora awk)
 ```bash
 for dir in ${PWD}/*; do (cd "$dir" && bash <(cat install.sh)); done
 ```
 
+## deploy.sh
+__Acceso SSH__ al sistema con usuario admin (sudo).
+* Login al repositorio _privado de instalación_ (repositorio público en proyecto)
+* Clonado del repositorio
+* Lanzador _Menu de Opciones_ de instalación
+```bash
+bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/3_deploy.sh)
+```
+### instalar docker y utils
+```bash
+bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/add_docker.sh)
+```
 
-### ejemplos
+__referencias__
 modo usuario
 ```bash
 # bash <(wget -qO - http://website.com/my-script.sh)

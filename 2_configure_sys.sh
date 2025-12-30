@@ -35,7 +35,7 @@ sudo apt install unattended-upgrades apt-utils --yes
 sudo dpkg-reconfigure -plow unattended-upgrades
 sudo curl -L https:
 sudo curl -L https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/conf/50unattended-upgrades -o /etc/apt/apt.conf.d/50unattended-upgrades
-sudo cp config/20auto-upgrades /etc/apt/apt.conf.d
+sudo curl -L https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/conf/20auto-upgrades -o /etc/apt/apt.conf.d/20auto-upgrades
 sudo unattended-upgrades --dry-run --debug
 
 # cambio de ip

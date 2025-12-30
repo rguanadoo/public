@@ -13,7 +13,7 @@ read -p 'DNS Local: ' srvdns
 
 # intalación apps
 echo basic apps
-sudo apt install net-tools rsync nano vim cron telnet git iputils-ping gh --yes
+sudo apt install net-tools rsync nano vim cron dialog telnet git iputils-ping gh --yes
 
 # config hostname host y timezone
 sudo hostnamectl hostname $srvname

@@ -1,6 +1,6 @@
 # Repositorio público
-Scripts de inicio de instalación de sistemas linux. \
-Directorio _conf_ ,contiene templates de ficheros del sistema.
+Scripts de inicio de instalación de sistemas debian. \
+Directorio _conf_: templates de ficheros del sistema.
 
 ## add_useradm.sh
 Se ejecuta desde la __consola de sistema__, con usuario root.
@@ -17,6 +17,8 @@ __Acceso SSH__ al sistema con usuario admin (sudo).
 * Instala aplicaciones basicas
 * Cambio nombre del servidor
 * Ajustar zona horaria Europe/Madrid
+* Actualizaciones automáticas (+ docker repo) - pendiente
+* Configuración red local y resolv.conf
 * Reinicio del sistema
 ```bash
 bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/2_configure_sys.sh)

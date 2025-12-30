@@ -1,6 +1,7 @@
 #!/bin/bash
 ### SCRIPT GITHUB + DEPLOY
 ### bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/install_user.sh)
+### requiere gh: sudo apt install gh. Instaladoen 2_configure_sys.sh
 
 ## variables
 echo introduce el repositorio a clonar: gituser/repo

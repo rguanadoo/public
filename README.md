@@ -1,25 +1,23 @@
 # Repositorio público
 Scripts de inicio de instalación de sistemas linux. Ejecutar en una carpeta vacia.
 
-## install_root.sh
+## add_useradm.sh
 Se ejecuta desde la __consola de sistema__, con usuario root.
 * Actualización del sistema
 * Instalación aplicaciónes básicas
 * Añade usuario administrador (sudo)
 * Reinicio del sistema
 ```bash
-bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/install_root.sh)
+bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/add_useradm.sh)
 ```
 
-## conf_sys.sh
+## start_sys.sh
 __Acceso SSH__ al sistema con usuario admin (sudo).
 * Cambio nombre del servidor
 * Ajustar zona horaria Europe/Madrid
-* Configura updates automáticos (pendiente)
-* Agrega certificados CA local (pendiente)
 * Reinicio del sistema
 ```bash
-bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/conf_sys.sh)
+bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/start_sys.sh)
 ```
 ## run_install.sh
 __Acceso SSH__ al sistema con usuario admin (sudo).

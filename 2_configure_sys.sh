@@ -6,7 +6,7 @@
 # variables
 echo nombre del servidor:
 read -p 'hostname: ' srvname
-echo ip del servidor x.x.x.x (sin mask - clase C = x.x.x.x/24)
+echo ip sin mascara
 read -p 'IpAddress: ' srvip
 read -p 'Gateway: ' srvgtw
 read -p 'DNS Local: ' srvdns

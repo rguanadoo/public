@@ -1,9 +1,12 @@
 #!/bin/bash
-# SCRIPT CONFIG BASE: update, usuario admin
-# bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/install_root.sh)
+# Purpose: update system + add sudo user
+# 30-12-2025 - Roberto Guanadoo
+
+# SCRIPT CONFIG BASE: 
+# bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/add_useradm.sh)
 
 # variables
-echo usuario y password administrador
+echo usuario y password nuevo administrador
 ipcli=$(hostname -I | cut -d' ' -f1)
 read -p 'usuario: ' useradm
 read -sp 'password: ' userpass

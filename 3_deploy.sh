@@ -1,27 +1,28 @@
 #!/bin/bash
-### SCRIPT GITHUB + DEPLOY
-### bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/3_deploy.sh)
-### requiere gh: sudo apt install gh. Instalado en 2_configure_sys.sh
+# Purpose: login en github clonado repo start_menu
+# 30-12-2025 - Roberto Guanadoo
+# requiere gh: sudo apt install gh. Instalado en 2_configure_sys.sh
+# bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/3_deploy.sh)
 
-## variables
+# variables
 echo introduce el repositorio a clonar: gituser/repo
 read -p 'Git Repo: ' gitrepo
 echo introducen el token de acceso al repo:
 read -sp 'API Token: ' gittoken
 
-## login en el repo
+# login en el repo
 export GH_TOKEN=$gittoken
 gh auth login --with-token $GH_TOKEN
 
-## clonar repo
+# clonar repo
 echo clon: $gitrepo e inicio install
 gh repo clone $gitrepo
 
-## reset token (opcional)
+# reset token (opcional)
 # gittoken=""
 # export GH_TOKEN=$gittoken
 
-## iniciar deploy 
+# iniciar deploy 
 # modificar si hay carpetas en la carpeta del usuario, o ejecutar en una carpeta vacia.
 
 #### COMENTAR LA SIGUIENTE LINEA SI SE QUIERE REVISAR EL CODIGO ####

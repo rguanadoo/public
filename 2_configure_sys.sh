@@ -25,15 +25,11 @@ sudo timedatectl set-timezone Europe/Madrid
 
 # config dns server local
 sudo mkdir /etc/systemd/resolved.conf.d
-
-sudo cp config/dns_local.conf /etc/systemd/resolved.conf.d/
+wget https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/conf/dns_local.conf
+echo 'FallbackDNS='$srvdns'' >> dns_local.conf
+sudo cp dns_local.conf /etc/systemd/resolved.conf.d/
 sudo systemctl reload-or-restart systemd-resolved
 # systemd-analyze cat-config systemd/resolved.conf
-
-# agregar ca local root + intermediate
-# https://www.digitalocean.com/community/tutorials/how-to-set-up-and-configure-a-certificate-authority-ca-on-debian-10-es
-sudo cp certs/*.crt /usr/local/share/ca-certificates/
-sudo update-ca-certificates
 
 # unattended-upgrades
 sudo apt install unattended-upgrades apt-utils 

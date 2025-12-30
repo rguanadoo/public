@@ -43,6 +43,6 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 
 # reinicio
-echo reinicio $hostname
+echo reinicio 
 sudo shutdown -r +1 "################## Reiniciando el sistema... ##################"
 

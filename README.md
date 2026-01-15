@@ -19,7 +19,7 @@ __Acceso SSH__ al sistema con usuario admin (sudo).
 * Instala aplicaciones basicas
 * Cambio nombre del servidor
 * Ajustar zona horaria Europe/Madrid
-* Actualizaciones automáticas (+ docker repo) - pendiente
+* Actualizaciones automáticas
 * Configuración red local y resolv.conf
 * Reinicio del sistema
 ```bash

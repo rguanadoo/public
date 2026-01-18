@@ -47,7 +47,7 @@ bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/
 ```
 __lanzar menu__ (pendiente mejora awk)
 ```bash
-for dir in ${PWD}/*; do (cd "$dir" && bash <(cat install.sh)); done
+./deploy.sh; done
 ```
 
 __referencias__

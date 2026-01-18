@@ -11,7 +11,7 @@ Se ejecuta desde la __consola de sistema__, con usuario root.
 * Añade usuario administrador (sudo)
 * Reinicio del sistema
 ```bash
-bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/1_add_useradm.sh)
+bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/scripts/useradm.sh)
 ```
 
 ## configure_sys.sh
@@ -23,7 +23,7 @@ __Acceso SSH__ al sistema con usuario admin (sudo).
 * Configuración red local y resolv.conf
 * Reinicio del sistema
 ```bash
-bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/2_configure_sys.sh)
+bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/scripts/configure_sys.sh)
 ```
 
 ## instalar docker y utils
@@ -34,7 +34,7 @@ bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/
 * creación carpeta de __stacks__
 * configuración script start (@reboot crontab) y stop de containers en la carpeta stacks y creación de redes docker.
 ```bash
-bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/add_docker.sh)
+bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/scripts/conf_docker.sh)
 ```
 
 ## deploy.sh - acceso github privado
@@ -43,7 +43,7 @@ __Acceso SSH__ al sistema con usuario admin (sudo).
 * Clonado del repositorio
 * Lanzador _Menu de Opciones_ de instalación
 ```bash
-bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/3_deploy.sh)
+bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/scripts/deploy.sh)
 ```
 __lanzar menu__ (pendiente mejora awk)
 ```bash

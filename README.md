@@ -32,7 +32,7 @@ bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/
 * docker-compose
 * permisos docker al usuario
 * creación carpeta de __stacks__
-* configuración script start (@reboot crontab) y stop de containers en la carpeta stacks y creación de redes docker.
+* PENDIENTE: configuración script start (@reboot crontab) y stop de containers en la carpeta stacks y creación de redes docker.
 ```bash
 bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/scripts/conf_docker.sh)
 ```

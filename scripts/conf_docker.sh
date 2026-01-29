@@ -1,5 +1,5 @@
 #!/bin/bash
-# Purpose: install docker engine lazydocker docker-compose 1.22 user docker perm
+# Purpose: install docker engine lazydocker docker-compose 5.0.2 user docker perm
 # 30-12-2025 - Roberto Guanadoo
 # bash <(wget -qO - https://raw.githubusercontent.com/rguanadoo/public/refs/heads/main/add_docker.sh)
 
